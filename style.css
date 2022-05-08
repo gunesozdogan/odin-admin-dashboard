@@ -37,6 +37,8 @@ html {
 
 .right-container {
     width: 85%;
+    display: flex;
+    flex-direction: column;
 }
 
 .middle-sidebar,
@@ -79,6 +81,32 @@ svg {
     fill: var(--main-font-color);
 }
 
+.my-profile {
+    display: Flex;
+    align-items: center;
+    margin-left: 3rem;
+    gap: 2rem;
+    margin-top: 20rem;
+}
+
+.github-link:link,
+.github-link:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--main-font-color);
+}
+
+.github-link:hover,
+.github-link:active {
+    color: var(--secondary-font-color);
+    transform: rotate(-5deg);
+}
+
+.github-logo {
+    height: 32px;
+    width: 32px;
+}
 /* UPPER HEADER SECTION */
 .upper-header {
     height: 10vh;
@@ -100,7 +128,7 @@ svg {
     width: 70rem;
     appearance: none;
     -webkit-appearance: none;
-    background-color: rgb(230, 229, 229);
+    background-color: rgba(199, 199, 199, 0.507);
     border: none;
     color: #000;
     font-size: 2rem;
@@ -140,10 +168,11 @@ svg {
 
 /* LOWER HEADER SECTION */
 .lower-header {
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1rem;
 }
 
 .welcome {
@@ -194,4 +223,143 @@ svg {
 .lower-nav a:hover,
 .lower-nav a:active {
     background-color: rgb(2, 123, 192);
+}
+
+/* MAIN CONTENT - PROJECTS*/
+
+.main-content {
+    background: rgba(199, 199, 199, 0.507);
+    flex: 1;
+    display: flex;
+    box-shadow: 0 5px 15px 0.5px rgba(0, 0, 0, 0.24);
+}
+
+.projects {
+    margin-left: 2rem;
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr repeat(3, 4fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.projects h2 {
+    grid-column: 1/-1;
+    font-size: 2.5rem;
+    align-self: end;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.project {
+    background: #fff;
+    width: 55rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px 0.5px rgba(0, 0, 0, 0.24);
+    border-left: solid 6px orange;
+}
+
+.project h3 {
+    font-size: 2.1rem;
+}
+
+.project-nav {
+    margin-top: 2rem;
+    display: Flex;
+    justify-content: right;
+    gap: 1rem;
+}
+
+.project-nav svg {
+    cursor: pointer;
+    fill: black;
+}
+
+.project-nav svg:hover {
+    fill: rgb(114, 109, 109);
+}
+
+/* MAIN CONTENT - SIDEBAR */
+.main-content-sidebar {
+    flex: 1;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    gap: 1rem;
+}
+
+.announcements h2 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+}
+.announcements-container {
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 5px 10px 0.5px rgba(0, 0, 0, 0.24);
+}
+
+.announcement {
+    border-bottom: solid 2px #999;
+}
+
+.announcement p {
+    margin-top: 0.3rem;
+}
+
+.trending {
+    display: Flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.trending h2 {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.trends {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2.3rem;
+    margin-right: 3rem;
+    box-shadow: 0 5px 10px 0.5px rgba(0, 0, 0, 0.24);
+    border-radius: 1rem;
+}
+
+.trend {
+    display: Flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trend img {
+    height: 5.5rem;
+}
+
+.trend-names {
+    display: Flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    color: #555;
+}
+
+.trend-names span:nth-child(1) {
+    font-weight: bold;
+    color: #000;
 }
